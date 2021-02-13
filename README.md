@@ -1,5 +1,5 @@
 # http-json-store
-> Simple HTTP server that returns JSON data which was previously posted
+> A simple HTTP server that returns previously posted JSON data
 
 ## How to use
 ### Server
@@ -16,6 +16,18 @@ docker build -t hjs https://github.com/moritzruth/http-json-store.git
 docker run -d -p 3000:3000 -e HJS_TOKEN=YOUR_TOKEN_HERE hjs
 ```
 
+#### Docker Compose
+```yaml
+version: '3'
+services:
+  hjs:
+    build: https://github.com/moritzruth/http-json-store.git
+    ports:
+      - "3000:3000"
+    environment:
+      HJS_TOKEN: YOUR_TOKEN_HERE
+```
+
 ### Client
 Example using fetch:
 ```js
@@ -29,3 +41,5 @@ await fetch("http://localhost:3000", {
   headers: { 'Content-Type': 'application/json', "Authorization": "Bearer YOUR_TOKEN_HERE" }
 })
 ```
+
+If you are calling this from Node.js, you need to use [`node-fetch`](https://github.com/node-fetch/node-fetch).
