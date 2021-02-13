@@ -13,7 +13,7 @@ HJS_TOKEN=YOUR_TOKEN_HERE npm start # or yarn start
 #### Docker
 ```sh
 docker build -t hjs https://github.com/moritzruth/http-json-store.git
-docker run -p 3000:3000 -e HJS_TOKEN=YOUR_TOKEN_HERE hjs
+docker run -d -p 3000:3000 -e HJS_TOKEN=YOUR_TOKEN_HERE hjs
 ```
 
 ### Client

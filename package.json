@@ -1,8 +1,10 @@
 {
   "name": "http-json-store",
   "version": "1.0.0",
+  "description": "A simple HTTP server that returns previously posted JSON data",
   "main": "index.js",
   "author": "Moritz Ruth <dev@moritzruth.de>",
+  "repository": "https://github.com/moritzruth/http-json-store.git",
   "license": "MIT",
   "private": true,
   "scripts": {
